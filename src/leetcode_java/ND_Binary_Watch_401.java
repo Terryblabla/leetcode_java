@@ -28,10 +28,35 @@ public class ND_Binary_Watch_401 {
 	public List<String> readBinaryWatch(int num) {
 
 		ArrayList<String> returnlist = new ArrayList<String>();
+		if(num < 0 || num > 9) return returnlist;
+		
+		for(int i = 0; i <= num; i++) {
+			if (i > 3) continue; // number of hour lights should less than 4
+			if(num - i > 5) continue; // number of minute lights should less than 6
+			ArrayList<String> hourlist = (ArrayList<String>) getHourList(i);
+			ArrayList<String> minutelist = (ArrayList<String>) getMinuteList(num - i);
+			returnlist.addAll(mergeHourAndMinuteList(hourlist, minutelist));
+		}
+		
 		return returnlist;
 	}
 	
-	
+	// return all possible hour combinations
+	private List<String> getHourList(int hourlight) {
+		ArrayList<String> hourlist = new ArrayList<String>();
+		return hourlist;
+	}
+	// return all possible minute combinations
+	private List<String> getMinuteList(int hourlight) {
+		ArrayList<String> minutelist = new ArrayList<String>();
+		return minutelist;
+	}
+	// merge all possible hour and minute combinations 
+	private List<String> mergeHourAndMinuteList(List<String> hourlist, List<String> minutelist) {
+		ArrayList<String> mergedlist = new ArrayList<String>();
+		
+		return mergedlist;
+	}
 	
     public List<String> readBinaryWatchRealWorld(int num) {
         String[][] hour = {{"0"},

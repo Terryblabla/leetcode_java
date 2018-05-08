@@ -27,7 +27,7 @@ Although the above answer is in lexicographical order, your answer could be in a
  * 2. will long or int handle its value? 
  */
 
-public class ND_Letter_Combinations_Of_A_Phone_Number_17 {
+public class Letter_Combinations_Of_A_Phone_Number_17 {
 	public List<String> letterCombinationsMethod2(String digits) {
 		if (null == digits)
 			throw new NullPointerException();
